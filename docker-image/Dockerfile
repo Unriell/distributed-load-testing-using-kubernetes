@@ -23,7 +23,7 @@ ADD licenses /licenses
 ADD locust-tasks /locust-tasks
 
 # Install the required dependencies via pip
-RUN pip install -r /locust-tasks/requirements.txt
+RUN pip3 install -r /locust-tasks/requirements.txt
 
 # Expose the required Locust ports
 EXPOSE 5557 5558 8089
@@ -32,4 +32,4 @@ EXPOSE 5557 5558 8089
 RUN chmod 755 /locust-tasks/run.sh
 
 # Start Locust using LOCUS_OPTS environment variable
-ENTRYPOINT ["/locust-tasks/run.sh"] 
+ENTRYPOINT ["/locust-tasks/run.sh", "tests/test_0001_new_massive_users.py"]
