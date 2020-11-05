@@ -12,6 +12,7 @@ Open Cloud Shell to execute the commands listed in this tutorial.
 
 Define environment variables for the project id, region and zone you want to use for this tutorial.
 
+    gcloud config set project test-locust-293111
     $ PROJECT=$(gcloud config get-value project)
     $ REGION=us-central1
     $ ZONE=${REGION}-b
